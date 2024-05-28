@@ -70,12 +70,16 @@ motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
 #print(motorcycles)
 
 
-to_expensive = 'ducati'
-motorcycles.remove(to_expensive)
+# to_expensive = 'ducati'
+# motorcycles.remove(to_expensive)
 
-print(f"\nA {to_expensive.title()} is to expensive for me.")
+# print(f"\nA {to_expensive.title()} is to expensive for me.")
 
+# To access items in a list the first item starts at 0 not a 1.
+# to access the last item in a list regardless if the list has been modified, you can use the index -1
+print(motorcycles[-1])
 
+# If the list is empty and this method is used it will return an error.
 
 
 
