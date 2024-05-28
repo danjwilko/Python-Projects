@@ -14,3 +14,13 @@ cars = ['bmw', 'audi', 'toyota', 'subaru']
 # print(cars)
 # print(sorted(cars))
 # print(cars)
+
+# To reverse the list rather than sort -  think if we added the list chronologically.
+# We can use the reverse method() method.
+
+# print(cars)
+# cars.reverse()
+# print(cars)
+# to find the length of a list we can use the len() function
+print(len(cars))
+
