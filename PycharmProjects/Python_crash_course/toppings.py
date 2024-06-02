@@ -51,3 +51,20 @@ if 'pepperoni' in requested_toppings:
 else:
     print(False)
 
+# # Testing multiple Conditions p83.
+#
+# # Sometimes It's important to test for each condition. So we can use several if statements.
+
+if 'mushrooms' in requested_toppings:
+    print("Adding mushrooms.")
+if 'pepperoni' in requested_toppings:
+    print("Adding pepperoni.")
+if 'extra cheese' in requested_toppings:
+    print("Adding extra cheese.")
+
+print(f"\nFinished making your pizza!")
+
+# This code wouldn't work properly if we used an if-elif-else block, it would stop running after meeting the
+# conditions of one of the tests.
+# This way each condition is tested.
+
