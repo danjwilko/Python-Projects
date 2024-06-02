@@ -1,9 +1,1 @@
-# If statements
-
-# simplest if statement is:
-
-"""
-if conditional_test:
-    do something
-"""
-
+# Alien Colors 5-3
