@@ -1,13 +1,14 @@
-# Checking Usernames
+# Ordinal numbers
 
-current_users = ['dan', 'Rich', 'amy', 'david', 'rachel', 'admin']
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-new_users = ['jeremy', 'lucy', 'rich', 'steve', 'abigail', 'emma', 'amy,']
-
-current_user_lookup = {name.lower() for name in current_users}
-for name in new_users:
-    if name.lower() in current_user_lookup:
-        print(f"Sorry {name} is already taken, you will need to input a new username")
+for number in numbers:
+    if number == 1:
+        print("1st")
+    elif number == 2:
+        print("2nd")
+    elif number == 3:
+        print("3rd")
     else:
-        print("The username is available")
+        print(f"{number}th")
 
