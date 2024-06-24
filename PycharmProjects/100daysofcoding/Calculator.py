@@ -46,9 +46,10 @@ operations = {
 }
 
 num1 = int(input("What's your first number?"))
-num2 = int(input("What's your second number?"))
+
 for symbol in operations:
     print(symbol)
 operation_symbol = input("Pick an operation from the line above")
+num2 = int(input("What's your second number?"))
 calculation_function = operations[operation_symbol]
 calculation_function(num1, num2)
