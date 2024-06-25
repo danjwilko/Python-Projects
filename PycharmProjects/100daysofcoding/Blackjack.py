@@ -24,10 +24,10 @@ cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 
 def blackjack():
-    play_blackjack = True
-    response = input("Do you want to play a game of Blackjack?\n Type 'y' or 'n': ")
-    if response == 'n':
+    if input("Do you want to play a game of Blackjack?\n Type 'y' or 'n': ") == 'n':
         play_blackjack = False
+    else:
+        play_blackjack = True
 
     while play_blackjack:
         print(logo)
@@ -56,7 +56,7 @@ def blackjack():
                 add_card = True
             else:
                 add_card = False
-                blackjack()
+        blackjack()
 
 
 blackjack()
