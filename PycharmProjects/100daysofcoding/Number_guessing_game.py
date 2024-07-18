@@ -7,7 +7,10 @@
 # Track the number of turns remaining.
 # If they run out of turns, provide feedback to the player.
 # Include two different difficulty levels (e.g., 10 guesses in easy mode, only 5 in the hard mode).
-import random
+from random import randint
+
+EASY_LEVEL_TURNS = 10
+HARD_LEVEL_TURNS = 5
 
 logo = """
 
@@ -20,51 +23,48 @@ logo = """
 
 """
 
-chosen_number = random.randint(1, 100)
-guessed_numbers = []
-guesses = 0
 
+# function to check users guess against the chosen random number
 
-def clues(guess):
-    if guess > chosen_number:
-        return "Too high!"
+def check_guess(user_guess, chosen, turns):
+    """checks answer against chosen number and remaining turns"""
+    if user_guess > chosen:
+        print("Too high.")
+        return turns - 1
+    elif user_guess < chosen:
+        print("Too low.")
+        return turns - 1
     else:
-        return "Too low!"
+        print(f"You got it! The answer was {chosen}.")
 
 
-def make_guess(guesses, guessed_numbers):
-    # number of guesses made
-    guesses = guesses + 1
-    # Lives remaining
-    lives_remaining = lives - guesses
+# Make a function to set the difficulty
 
-    # While user has lives remaining.
-    while lives_remaining != 0:
-        guess = int(input("Make your guess: "))
-        if guess in guessed_numbers:
-            print('You have already guessed that number')
-        elif guess not in guessed_numbers and guess != chosen_number:
-            guessed_numbers.append(guess)
-            print(guessed_numbers)
-            print(f"{clues(guess)}")
-            print(f"You have {lives_remaining} attempts to guess the number.")
-            print("Guess again.")
-            make_guess(guesses, guessed_numbers)
-
-        else:
-            if guess == chosen_number:
-                print(f"Congrats! You guessed the number in {guesses} guesses!")
-    if lives_remaining == 0:
-        print(f"You have {guesses} guesses left.")
+def set_difficulty():
+    difficulty = input("Choose a difficulty. Type 'easy' or 'hard: ")
+    if difficulty == 'easy':
+        return EASY_LEVEL_TURNS
+    else:
+        return HARD_LEVEL_TURNS
 
 
-print(logo)
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100.")
+def game():
+    # Choose a number at random between 1 and 100
+    print("Welcome to the number guessing game")
+    print("I'm thinking of a number between 1 and 100.")
+    chosen = randint(1, 100)
+    turns = set_difficulty()
+    print(f"You have {turns} attempts remaining to guess the number.")
 
-difficulty = input("Choose a difficulty. Type 'easy or 'hard': ")
-if difficulty == "easy":
-    lives = 10
-if difficulty == "hard":
-    lives = 5
-make_guess(guesses, guessed_numbers)
+    # repeat the guessing function if they get it wrong
+    user_guess = 0
+    while user_guess != chosen:
+        # let the user guess a number
+        user_guess = int(input("Make a guess: "))
+        check_guess(user_guess, chosen, turns)
+
+
+# Track the number of turns and reduce by 1 if they get the guess wrong.
+
+
+game()
