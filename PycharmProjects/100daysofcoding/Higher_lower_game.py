@@ -21,57 +21,51 @@ vs = """
 |___/____(_)
 """
 
-# Create two choices A and B
 
-# Ask the user which is highest.
+# number_of_guesses = 0
+#
+# score = 0
 
-# Compare the response to the highest.
-# Track number of right gueses
-
-# Keep track of previous right answer.
-# make the previous high/correct answer the new A comparison.
-
-# Compare the two options and set the highest value.
-highest = ''
-
-
-def choice_a():
-    a = random.choice(data)
-    return a
-
-
-def choice_b():
-    b = random.choice(data)
-    return b
-
-
-def compare(first, second):
-    a_followers = first.get("followers")
-    b_followers = second.get("followers")
-    print(a_followers)
-    print(b_followers)
-    if a_followers > b_followers:
-        highest = 'a'
+# Check if the user is correct
+def compare(guess, highest):
+    if guess == highest:
+        guess_correct = True
+        print("That's correct")
     else:
-        highest = 'b'
+        guess_correct = False
+        print("Sorry that's wrong")
+    return guess_correct
+
+
+#
+# def track_score():
+
+def get_followers(option_a, option_b):
+    if option_a['follower_count'] > option_b['follower_count']:
+        print("A has the larger follower count")
+        highest = 'A'
+    else:
+        print("B has the larger follower count")
+        highest = 'B'
     return highest
 
 
-def compare_guess(response):
-    if response.lower() == highest:
-        print("correct")
-
-
 def game():
-    first = choice_a()
-    second = choice_b()
-    compare(first, second)
+    # Print logo.
     print(logo)
-    print(f"Compare A: {first.get("name")}, who is an {first.get("description")}, from {first.get("country")}.")
+    # Get random options from the data file.
+    option_a = random.choice(data)
+    option_b = random.choice(data)
+    print(f"Compare A: {option_a["name"]}, a {option_a["description"]}, from {option_a['country']}")
+    # Print second part of the logo.
     print(vs)
-    print(f"Against B: {second.get("name")}, who is an {second.get("description")} from {second.get("country")}.")
-    response = input("Who has more followers? Type 'A' or 'B': ")
-    compare_guess(response)
+    print(f"Against B: {option_b["name"]}, a {option_b["description"]}, from {option_b['country']}")
+    guess = input("Who has more followers? Type 'A' or 'B': ")
+    compare(guess, get_followers(option_a, option_b))
+    while guess_correct:
+        if guess == 'A':
+            option_a = option_a
+        else
 
 
 game()
