@@ -62,10 +62,7 @@ def game():
     print(f"Against B: {option_b["name"]}, a {option_b["description"]}, from {option_b['country']}")
     guess = input("Who has more followers? Type 'A' or 'B': ")
     compare(guess, get_followers(option_a, option_b))
-    while guess_correct:
-        if guess == 'A':
-            option_a = option_a
-        else
+    while
 
 
 game()
