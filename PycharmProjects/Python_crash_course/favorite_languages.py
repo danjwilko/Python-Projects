@@ -25,7 +25,7 @@ favorite_languages = {
 #
 # for name in favorite_languages.keys():
 
-friends =  ['phil', 'sarah']
+friends = ['phil', 'sarah']
 for name in favorite_languages:
     print(f"Hi {name.title()}")
     if name in friends:
@@ -65,16 +65,3 @@ for language in set(favorite_languages.values()):
 # Example:
 languages = {'python', 'ruby', 'python', 'c'}
 print(languages)
-
-
-
-
-
-
-
-
-
-
-
-
-
