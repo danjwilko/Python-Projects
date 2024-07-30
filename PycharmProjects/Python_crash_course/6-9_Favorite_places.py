@@ -2,7 +2,7 @@
 favorite_places = {
     'bob': ['Spain', 'Italy'],
     'lisa': ['Belguim'],
-    'phil':['France', 'Switzerland']
+    'phil': ['France', 'Switzerland']
 }
 
 for name, places in favorite_places.items():
