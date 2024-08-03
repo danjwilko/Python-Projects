@@ -7,4 +7,5 @@ while active:
     if topping != "quit":
         print(f"I'll add {topping} to your pizza toppings.")
     else:
-        break
+        if topping == "quit":
+            active = False
