@@ -17,7 +17,7 @@
 #
 # # Display all completed models.
 # print("\nThe following models have been printed:")
-# for model in completed_models:
+# for completed_model in completed_models:
 #     print(model)
 
 
@@ -36,8 +36,9 @@ def print_models(unprinted_designs, completed_models):
 def show_completed_models(completed_models):
     """Show all models that were printed"""
     print("\nThe following models have been printed:")
-    for model in completed_models:
-        print(model)
+    for completed_model in completed_models:
+        print(completed_model)
+
 
 
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
@@ -46,4 +47,13 @@ completed_models = []
 
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
+
+
+# Preventing a function from modifying a list.
+# Sometimes we will want to prevent a function from modifying a list. A way of doing this is by passing the function
+# a copy of the original list, so that the original list is not altered.
+
+# function_name(list_name[:])
+# """The slice notation [:] makes a copy of the list and sends it to the function"""
+
 
