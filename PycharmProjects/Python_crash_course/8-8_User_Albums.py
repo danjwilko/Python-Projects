@@ -1,25 +1,29 @@
 def make_album(artist, title, tracks=None):
     """Returns a dictionary with information about an album."""
-    album = {'Artist': artist.title(), 'Album title': title.title()}
+    album_details = {
+        'Artist': artist.title(),
+        'Album title': title.title()
+    }
     if tracks:
-        album = {'Artist': artist.title(), 'Album title': title.title(), 'Number of tracks': tracks}
-    else:
-        album = {'Artist': artist.title(), 'Album title': title.title()}
-    return album
+        album['Tracks'] = tracks
+    return album_details
 
+
+artist_prompt = "Enter the artist's name: "
+title_prompt = "Enter the album title: "
+
+
+print("Enter 'q' to quit at any time.")
 
 while True:
-    print("Enter the artist's name: ")
-    print("(enter 'q' to quit at any time.)")
-
-    artist = input('Artist name: ')
+    artist = input(artist_prompt)
     if artist == 'q':
         break
-    print("Enter the album's title: ")
-    title = input('Album title: ')
+
+    title = input(title_prompt)
     if title == 'q':
         break
-    formatted_album = make_album(artist, title)
-    print(f"{formatted_album}")
 
+    album = make_album(artist, title)
+    print(album)
 
