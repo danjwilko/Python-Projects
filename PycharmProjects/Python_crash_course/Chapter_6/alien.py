@@ -5,7 +5,7 @@ print(alien_0['color'])
 print(alien_0['points'])
 
 # A dictionary in python is a collection of key-value pairs
-# Each key is connected to a value and you can use the key to access the value associated with the key.
+# Each key is connected to a value, and you can use the key to access the value associated with the key.
 
 # Accessing Values in a Dictionary To get the value associated with a key, we give the name of the dictionary,
 # and then place the key inside a set of square brackets.
