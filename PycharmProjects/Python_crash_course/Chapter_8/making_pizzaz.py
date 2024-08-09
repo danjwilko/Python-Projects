@@ -17,7 +17,6 @@ from pizza import make_pizza
 make_pizza(16, 'pepperoni')
 make_pizza(12, 'pepperoni', 'mushrooms', 'green pepper', 'extra cheese')
 
-
 """Using as to give a function an Alias"""
 
 # The name of your function were importing may conflict with a existing name being used in the program or if the
@@ -50,8 +49,25 @@ p.make_pizza(12, 'pepperoni', 'mushrooms', 'green pepper', 'extra cheese')
 from pizza import *
 
 make_pizza(16, 'pepperoni')
-make_pizza(12, 'pepperoni', 'mushrooms', 'green pepper',)
+make_pizza(12, 'pepperoni', 'mushrooms', 'green pepper', )
 
 # Note its always best to try an umport only the functions you want, or import the entrire module and use dot notation.
 # General syntax is:
 # from module_name import.
+
+"""Styling Functions"""
+
+# Functions should have descriptive names and these names should use lowercase letters and underscores.
+# Using descriptive names helps you and others understand what your code is trying to do. Module names should also
+# Follow these conventions as well.
+
+# Every function should have a comment that explains concisely what the function does.
+# The comment should appear immediately after the function definition and use a docstring format.
+
+# If you specify a deafult value for a parameter, no spaces should e on either side of the equals sign.
+
+# def function_name(parameter_0, parameter_1='default value')
+
+# The same conventions should be used for keyword arguments in function calls.
+
+# function_name(value_0, parameter_1='value')

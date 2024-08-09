@@ -40,14 +40,11 @@ def show_completed_models(completed_models):
         print(completed_model)
 
 
-
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
 completed_models = []
 
-
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
-
 
 # Preventing a function from modifying a list.
 # Sometimes we will want to prevent a function from modifying a list. A way of doing this is by passing the function
@@ -55,5 +52,3 @@ show_completed_models(completed_models)
 
 # function_name(list_name[:])
 # """The slice notation [:] makes a copy of the list and sends it to the function"""
-
-
