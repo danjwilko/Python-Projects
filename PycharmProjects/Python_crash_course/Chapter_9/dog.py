@@ -46,5 +46,7 @@ my_dog.roll_over()
 # You can create as many instances from a class as you need.
 
 my_dog = Dog('Willie', 6)
-your_dog = Dog('Lucy',)
+your_dog = Dog('Lucy', 3)
+
+
 
