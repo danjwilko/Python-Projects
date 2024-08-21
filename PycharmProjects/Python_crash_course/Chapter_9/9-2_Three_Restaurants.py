@@ -12,7 +12,6 @@ class Restaurant():
         print(f"{self.restaurant_name}, is open!")
 
 
-
 restaurant = Restaurant("Tarantino's", "italian")
 restaurant.describe_restaurant()
 
@@ -22,4 +21,3 @@ restaurant = Restaurant("Suttons", 'fish and chips')
 restaurant.describe_restaurant()
 restaurant = Restaurant("Pizza hut", 'pizza')
 restaurant.describe_restaurant()
-
