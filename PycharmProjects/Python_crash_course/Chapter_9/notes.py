@@ -1,6 +1,11 @@
+# Inheritance
+# If the class you are writing is a specialised version of another class you have written, we can use inheritance.
+# When one class inherits from another, it takes on the attributes and methods of the first class.
+# The original class is the parent class, and the new class is the child class.
+
 # Defining Attributes and Methods for the child class.
-    # Once we have a child class that inherits from a parent class, you can add any attributes and methods necessary to
-    # differentiate the child class from the parent class.
+# Once we have a child class that inherits from a parent class, you can add any attributes and methods necessary to
+# differentiate the child class from the parent class.
 
 # There's no limit to how much we specialise the ElectricCar class. You can add as many attributes and methods
 # as we need to model an electric car to whatever degree of accuracy we need.
@@ -45,3 +50,14 @@
 # Sometimes you'll want to spead out your classes across several modules to keep any one file from getting to large.
 # When you store your classes in several modules, you may find that a class in one module may rely on a class in another
 # module, when this happens you can import the required class into the first module.
+
+# Importing the entire module.
+# We can also import the entire module and access the classes we need using dot notation.
+
+# import car
+#
+# my_beetle = car.Car('volkswagen', 'beetle', 2019)
+# print(my_beetle.get_descriptive_name())
+#
+# my_tesla = car.ElectricCar('tesla', 'roadster', 2019)
+# print(my_tesla.get_descriptive_name())
