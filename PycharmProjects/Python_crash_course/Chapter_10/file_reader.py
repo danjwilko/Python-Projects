@@ -11,6 +11,6 @@ print(contents.rstrip())
 #
 # with open('text_files/filename.txt') as file_object:
 
-# Note: windows systems use a backslach (\) instead of a forward slash (/) when displaying file paths, but you can
+# Note: windows systems use a backslash (\) instead of a forward slash (/) when displaying file paths, but you can
 # still use forward slashes in your code.
 
