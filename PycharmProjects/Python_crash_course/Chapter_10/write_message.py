@@ -6,7 +6,6 @@
 # To write to a file we need to call open() with a second argument telling python that you want to write to a file.
 
 
-
 filename = 'programming.text'
 
 with open(filename, 'w') as file:
