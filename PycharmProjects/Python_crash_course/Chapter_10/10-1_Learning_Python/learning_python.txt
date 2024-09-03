@@ -1,0 +1,3 @@
+In Python you can take user input and work with the data entered
+In Python you can create functions
+In Python you can store large amounts of data

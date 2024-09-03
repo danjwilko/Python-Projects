@@ -49,6 +49,36 @@ print(pi_string)
 print(len(pi_string))
 
 # Large files: One Million Digits.
+# We can work with larger files, for example, rather than using 30 decimal places, we can use pi to 1,000,000 decimal
+# places, without altering the code, we simply pass in a new file. well also limit the output to 50 decimal places.
 
+filename = 'pi_million_digits.txt'
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+
+print(f"{pi_string[:52]}...")
+print(len(pi_string))
+
+# Is you birthday contained in py.
+
+
+filename = 'pi_million_digits.txt'
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+
+
+birthday = input("Enter your birthday in the form ddmmyy:")
+if birthday in pi_string:
+    print(f"Your birthday appears in the first million digits of pi!")
+else:
+    print(f"Your birthday does not appear in the first million digits of pi!")
 
 
