@@ -1,0 +1,17 @@
+Using json.dump() and json.load()
+
+The json.dump() function takes two arguments: a piece of data to store and
+a file object it can use to store the data
+We use  the json.load() function to read the data back into memory.
+
+Saving and reading user generated Data
+
+Saving data with json is useful when your working with user generated data,
+because if you dont store your users information somehow, you'll lose it when
+the programs stop running.
+
+Refactoring
+Often, you'll come to a point where your code will wor, but you recognise that
+you could improve the code by breaking it up into a series of functions that have specific jobs.
+The process is called refactoring.
+Refactoring makes your code cleaner and easier to extend.
