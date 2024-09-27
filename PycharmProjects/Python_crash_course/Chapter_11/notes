@@ -1,0 +1,7 @@
+Unit tests and Test cases
+
+the module unittest from the python standard library provides tools for testing your code.
+A unit test verifies that one specific aspect of a function's behavior is correct.
+A test case is a collaction if unit tests that together prove that a function behaves as it supposed to
+within the full range of situations you expect it to handle.
+
