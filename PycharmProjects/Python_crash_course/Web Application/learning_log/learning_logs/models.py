@@ -20,6 +20,7 @@ class Entry(models.Model):
 
     def __str__(self):
         """Return a string representation of the model."""
+        """If the text is longer than 50 characters, return the first 50 characters followed by '...' else return the string without elipses."""
         if (len(self.text) >= 50):
             return f"{self.text[:50]}..."
         else:
