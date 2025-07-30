@@ -1,12 +1,12 @@
-"""Defines URL patterns for the meal_plans app."""
+"""Defines the URL patterns for pizza"""
 
 from django.urls import path
 
 from . import views
 
-app_name = 'meal_plans'
+app_name = 'pizzas'
 urlpatterns = [
     # Home page.
     path('', views.index, name='index'),
-    # Other meal planner URLs can be added here.
+    # Other pizza URLs can be added here.
 ]
